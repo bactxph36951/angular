@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<!-- ng-app: khai báo tên ứng dụng -->
+<body ng-app="wd18307">
+<!-- ng-controller: khai báo controller -->
+<div class="" ng-controller="imgController">
+    <img src="{{ path }}" alt="">
+    <h1>Hello {{ count }}</h1>
+    <button type="button" ng-click="upCount()">Bấm</button>
+    <!-- ng-if: nếu dk đúng thì tạo thẻ và hiển thị -->
+    <!-- ng-show: nếu dk đúng thì hiển thị -->
+    <!-- ng-hide: nếu dk đúng thì ko hiển thị -->
+    <p ng-if="count %2 == 0">Đây là số chẵn</p>
+    <p ng-show="count %2 == 0">Đây là số chẵn</p>
+    <p ng-hide="count %2 == 0">Đây là số lẻ</p>
+
+    
+
+</div>
+    <form action="" ng-controller="myController" class="container">
+        <label for="name" class="form-lable">Name</label>
+        <input type="text" ng-model="" class="form-control">
+        <!-- <h1>Hello {{ scope.name }}</h1> -->
+        <!-- <h1>Hello {{ student['name'] }}</h1>
+        <h1>Hello {{ student.name }}</h1> -->
+        <!-- <h1>Hello {{ student -> name }}</h1> lỗi -->
+        <h1>Hello {{ listStudent[2] }}</h1>
+        <h1>Hello {{ student.name }}</h1>
+    <h1>Hello {{ count }}</h1>
+
+    </form>
+    <!-- <div ng-controller="myController">
+        <p>{{scope.name]}}</p>
+    </div> -->
+        <!-- <h1>Hello {{ name }}</h1> -->
+        <script>
+        var app = angular.module('wd18307', []); //Khởi tạo angular module
+        // C1:
+        // app.controller('myController', function ($scope) {
+        //     $scope.name = 'wd18307'; //khởi tạo biến name
+
+        // });
+        // rút gọn nếu chỉ có 1 controller
+        angular.module('wd18307').controller('myController', function ($scope, $rootScope){
+            $rootScope.count = 10;
+            
+            $scope.listStudent = ['bactx', 'bactx@', 'female'];
+            $scope.student = {
+                name: 'bactx',
+                email: 'bactx@',
+                gender: 'male'
+            }; //khởi tạo biến name
+        });
+        app.controller("imgController", function ($scope){
+            $scope.path = "./img/oppo-reno11-f-timm-thumb-600x600.webp"
+            $scope.count = 1;
+            $scope.upCount = function (){
+                $scope.count += 1;
+            }
+        })
+        //C2:
+        // function an($scope) {
+        //     $scope.listStudent = ['bactx', 'bactx@', 'female'];
+        //     $scope.student = {
+        //         name: 'bactx',
+        //         email: 'bactx@',
+        //         gender: 'male'
+        //     }
+        // }
+        // app.controller('myController', an);
+    </script>
+</body>
+</html>

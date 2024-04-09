@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body ng-app="bac">
+
+    <form action="" ng-controller="naem">
+    <h2>{{ hoang.name }}</h2>
+
+        <label for="name">Name</label>
+        <input type="text" name="name">
+    </form>
+
+
+    <script>
+        
+
+        angular.module('bac').controller('naem', function($scope){
+            $scope.hoang = {
+                name: 'hoang',
+                price: 121321
+            };
+        })
+    </script>
+</body>
+</html>

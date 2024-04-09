@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container w-25">
+        <form>
+            
+            <h2 class="text-center">THÊM ĐIỆN THOẠI</h2>
+              <div class="mb-3">
+                <label for="disabledTextInput" class="form-label">ID:</label>
+                <input type="text" id="disabledTextInput" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label for="disabledTextInput" class="form-label">Tên:</label>
+                <input type="text" id="disabledTextInput" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label for="disabledSelect" class="form-label">Hãng</label>
+                <select id="disabledSelect" multiple class="form-select form-select-lg mb-3" aria-label="Default select example">
+                  <option value="1">SAM SUNG</option>
+                  <option value="2">IPHONE</option>
+                </select>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Default checkbox
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                  <label class="form-check-label" for="flexCheckChecked">
+                    Checked checkbox
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    Default radio
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                  <label class="form-check-label" for="flexRadioDefault2">
+                    Default checked radio
+                  </label>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" placeholder="ON">
+                  <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+                </div>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                  <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+                </div>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" disabled>
+                  <label class="form-check-label" for="flexSwitchCheckDisabled">Disabled switch checkbox input</label>
+                </div>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled" checked disabled>
+                  <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Disabled checked switch checkbox input</label>
+                </div>
+                <label for="customRange1" class="form-label">Example range</label>
+                <input type="range" class="form-range" id="customRange1" step="0.5" max="5">
+              </div>
+              <div class="mb-3">
+                <label for="disabledTextInput" class="form-label">Giá</label>
+                <input type="number" id="disabledTextInput" class="form-control">
+              </div>
+            
+              <button type="submit" class="btn btn-success d-grid gap-2 mx-auto">Thêm</button>
+          
+          </form>
+    </div>
+
+    
+    
+  </body>
+</html>
