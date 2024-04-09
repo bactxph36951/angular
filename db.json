@@ -1,0 +1,28 @@
+{
+  "teachers": [
+    {
+      "id": "1",
+      "ten": "Trần Xuân Bắc",
+      "gioi_tinh": "Nam",
+      "email": "bactx@ak"
+    },
+    {
+      "id": "2",
+      "ten": "Trần Xuân 2",
+      "gioi_tinh": "Nam",
+      "email": "bactx@ak"
+    },
+    {
+      "id": "3",
+      "ten": "Trần Xuân 3",
+      "gioi_tinh": "Nữ",
+      "email": "bactx@ak"
+    },
+    {
+      "id": "39ac",
+      "ten": "aa",
+      "gioi_tinh": "b",
+      "email": "b"
+    }
+  ]
+}

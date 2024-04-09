@@ -1,0 +1,22 @@
+<h1 class="text-center">Danh sách teacher</h1>
+<a href="#!/add-teacher"><button class="btn btn-success float-end">Thêm</button></a>
+<table class="table">
+    <thead>
+        <th>STT</th>
+        <th>Tên</th>
+        <th>Giới tính</th>
+        <th>Email</th>
+        <th>Action</th>
+    </thead>
+    <tbody ng-repeat="t in teachers">
+        <tr>
+            <td>{{t.id}}</td>
+            <td>{{t.ten}}</td>
+            <td>{{t.gioi_tinh}}</td>
+            <td>{{t.email}}</td>
+            <td><button class="btn btn-primary" ng-click="onDetail(t.id)">Chi tiết</button>
+            <button class="btn btn-warning">Sửa</button></td>
+          
+        </tr>
+    </tbody>
+</table>
