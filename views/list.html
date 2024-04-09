@@ -1,0 +1,22 @@
+<h1>Đây là trang danh sách</h1>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Des</th>
+        <th>Price</th>
+        <th>Action</th>
+    </tr>
+    <tr ng-repeat="p in product">
+        <td>{{p.id}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.description}}</td>
+        <td>{{p.price}}</td>
+        <td>
+        <button class="btn btn-success" ng-click="onDetail(p.id)">Chi tiết</button>
+        <button class="btn btn-warning" ng-click="onEdit(p.id)">Sửa</button>
+        <!-- <button class="btn btn-success" ng-click="getDetail(p.id)">Sửa</button> -->
+        <button class="btn btn-warning" ng-click="showProduct()">Xoá</button>
+        </td>
+    </tr>
+</table>

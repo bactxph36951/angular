@@ -1,0 +1,59 @@
+<h1>Đây là trang thêm mới</h1>
+<form name="addForm">
+    <label for="name" class="form-label">Email</label>
+    <input type="email" id="email" name="email" class="form-control" ng-model="inputValue.email" required>
+    <p ng-if="addForm.email.$error.required && addForm.email.$dirty" class="text-danger">Email ko đc để trống</p>
+    <p ng-if="addForm.email.$invalid && addForm.email.$dirty" class="text-danger">Email ko đúng định dạng</p>
+
+    <label for="name" class="form-label">Name</label>
+    <input type="text" id="name" name="name" class="form-control" ng-model="inputValue.name" required minlength="6" maxlength="99">
+    <p ng-if="addForm.name.$error.required && addForm.name.$dirty" class="text-danger">Tên ko đc để trống</p>
+    <p ng-if="addForm.name.$error.minlength&& addForm.name.$dirty" class="text-danger">Tên ko đc ít hơn 6 kí tự</p>
+    <p ng-if="addForm.name.$error.maxlength && addForm.name.$dirty" class="text-danger">Tên ko đc nhiều hơn 100 kí tự</p>
+    <label for="description" class="form-label">Des</label>
+    <input type="text" id="description" name="description" class="form-control" ng-model="inputValue.description" required>
+    <p ng-if="addForm.description.$error.required && addForm.description.$dirty" class="text-danger">Des ko đc để trống</p>
+    <label for="price" class="form-label">Price</label>
+    <input type="text" id="price" name="price" class="form-control" ng-model="inputValue.price" required>
+    <p ng-if="addForm.price.$error.required && addForm.price.$dirty" class="text-danger">Price ko đc để trống</p>
+
+
+    <button type="submit" class="btn btn-primary mt-3" ng-click="onSubmit()">Thêm</button>
+</form>
+<!-- <script>
+    window.AddController = function ($scope, $http, $location) {
+    var apiUrl = 'http://localhost:3000/products/'
+    console.log(1);
+    // $scope.onSubmit = function () {
+   
+    //     $http.post(apiUrl,$scope.inputValue).then(function ($response) {
+    //         console.log($response);
+    //         if($response.status == 201){
+    //             $location.path('/')
+    //         }
+    //     })
+
+    //     console.log(newProduct); 
+    // }
+        $scope.submitForm = function(event) {
+            event.preventDefault(); // Ngăn chặn hành vi mặc định của sự kiện submit
+            
+            var newProduct = {
+                name: $scope.inputValue.name,
+                description: $scope.inputValue.description,
+                price: $scope.inputValue.price
+            };
+    
+            $http.post(apiUrl, newProduct).then(function(response) {
+                console.log(response);
+                // Xử lý kết quả trả về, nếu cần
+            }, function(error) {
+                console.error(error);
+                // Xử lý lỗi nếu có
+            });
+        };
+    
+    
+   
+}
+</script> -->

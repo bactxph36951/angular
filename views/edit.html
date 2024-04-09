@@ -1,0 +1,11 @@
+<h1>Đây là trang sửa</h1>
+<form ng-submit="">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" id="name" name="name" class="form-control" ng-model="inputValue.name">
+    <label for="description" class="form-label">Des</label>
+    <input type="text" id="description" name="description" class="form-control" ng-model="inputValue.description">
+    <label for="price" class="form-label">Price</label>
+    <input type="text" id="price" name="price" class="form-control" ng-model="inputValue.price">
+
+    <button type="submit" class="btn btn-primary mt-3" ng-click="onUpdate()">Edit</button>
+</form>
